@@ -25,3 +25,8 @@ core/infra/protobuf
 docker/tiny/iroha/
 include/generated/*
 .scannerwork/
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
