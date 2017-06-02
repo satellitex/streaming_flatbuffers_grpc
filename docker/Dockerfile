@@ -31,16 +31,20 @@ RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test && \
 
 
 #install flatbuffer
-RUN git clone https://github.com/google/flatbuffers.git \
-    cd flatbuffers \
-    cmake -G "Unix Makefiles" \
-    make
+RUN cd; \
+    git clone https://github.com/google/flatbuffers.git; \
+    cd flatbuffers; \
+    cmake -G "Unix Makefiles"; \
+    make; \
+    make install; \
+    cp ./flatc /usr/bin/
 
 #install grpc
-RUN git clone -b v1.3.0 https://github.com/grpc/grpc
-    cd grpc
-    git submodule update --init
-    make
+RUN cd; \
+    git clone -b v1.3.0 https://github.com/grpc/grpc; \
+    cd grpc; \
+    git submodule update --init; \
+    make; \
     make install
 
 
