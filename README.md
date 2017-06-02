@@ -4,7 +4,8 @@
 ```
 cd docker
 docker build -t satellitex/flatbuf-test .
-docker run -it --name flat-test -v streaming_flatbuffers_grpc:/opt/flat-test satellitex/flatbuf-test /bin/bash
+cd ../
+docker run -it --name flat-test -v $(pwd):/opt/flat-test satellitex/flatbuf-test /bin/bash
 ```
 
 
